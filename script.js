@@ -52,7 +52,7 @@ storeLogoEl.src = STORE_LOGO_URL;
     console.log("📡 إرسال طلب إلى /menu");
     // Add cache-busting parameter
     const cacheBust = `?_t=${Date.now()}`;
-    const response = await fetch(`/menu${cacheBust}`);
+const response = await fetch(`${API_URL}?_t=${Date.now()}`);
     console.log("✅ استلام رد:", response.status, response.statusText, response.url);
     console.log("Response headers:", Object.fromEntries(response.headers.entries()));
     
